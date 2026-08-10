@@ -1,9 +1,11 @@
+/* Zera margens e paddings padrão do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Organiza o logo e o título no cabeçalho */
 .cabecalho {
     display: flex;
     align-items: center;
@@ -12,20 +14,24 @@
     padding: 20px;
 }
 
+/* Ajusta o tamanho da imagem do cabeçalho */
 .cabecalho img {
     width: 80px;
 }
 
+/* Define a cor de fundo da barra de navegação */
 nav {
     background-color: #2e6a0d;
 }
 
+/* Alinha os itens do menu na horizontal */
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
+/* Estiliza os links do menu */
 nav a {
     display: block;
     padding: 15px 25px;
@@ -33,10 +39,12 @@ nav a {
     text-decoration: none;
 }
 
+/* Muda a cor quando o mouse passa por cima */
 nav a:hover {
     background-color: #444;
 }
 
+/* Cria espaço interno no conteúdo principal */
 main {
     padding: 30px;
 }
