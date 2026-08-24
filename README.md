@@ -23,3 +23,30 @@ Este projeto é uma página web simples feita com HTML e CSS.
 ## Observação
 
 O projeto está em uma versão inicial, então o conteúdo pode ser ampliado com mais seções, textos e imagens depois.
+
+
+## Fluxo
+                 ┌──────────────┐
+                 │  MongoDB     │
+                 │              │
+                 │ Banana       │
+                 │ Maçã         │
+                 │ Laranja      │
+                 └──────┬───────┘
+                        ↑
+                        │
+                     consulta
+                        │
+                 ┌──────┴───────┐
+                 │   Express    │
+                 │   Node.js    │
+                 └──────┬───────┘
+                        ↑
+                     fetch()
+                        │
+                 ┌──────┴───────┐
+                 │ JavaScript   │
+                 │   frontend   │
+                 └──────┬───────┘
+                        ↓
+                     USUÁRIO
