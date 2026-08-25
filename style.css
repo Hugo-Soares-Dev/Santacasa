@@ -48,3 +48,65 @@ nav a:hover {
 main {
     padding: 30px;
 }
+
+
+.ficha {
+    width: 360px;
+    margin: 30px auto;
+    padding: 15px;
+
+    border: 3px solid #222;
+    background-color: white;
+
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.ficha h2 {
+    margin: 0 0 10px;
+
+    text-align: center;
+    font-size: 28px;
+}
+
+.titulo-ficha {
+    padding: 8px 0;
+
+    border-top: 8px solid #222;
+    border-bottom: 4px solid #222;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.porcao {
+    padding: 10px 0;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #222;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #222;
+
+    font-size: 16px;
+}
+
+.linha strong {
+    font-weight: bold;
+}
+
+.destaque {
+    border-bottom: 3px solid #222;
+
+    font-size: 18px;
+    font-weight: bold;
+}
