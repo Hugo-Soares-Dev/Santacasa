@@ -1,112 +1,459 @@
-/* Zera margens e paddings padrão do navegador */
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+    :root {
+    --verde-principal: #315c3a;
+    --verde-claro: #e8f1ea;
+
+    --fundo: #f7f8f5;
+    --branco: #ffffff;
+
+    --texto: #333333;
+    --texto-secundario: #777777;
+
+    --borda: #e8e8e8;
+}
+/* Remove margens e espaçamentos padrão do navegador
+   e faz o tamanho dos elementos ser mais previsível. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Organiza o logo e o título no cabeçalho */
+
+/* Configurações gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   Usado nas páginas que possuem o cabeçalho do Santa Dieta.
+   ========================================================= */
+
 .cabecalho {
+    /* Altura do cabeçalho */
+    height: 72px;
+
+    /* Coloca os elementos lado a lado */
     display: flex;
+
+    /* Centraliza verticalmente */
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+
+    /* Coloca a logo de um lado e o botão do outro */
+    justify-content: space-between;
+
+    /* Espaçamento interno horizontal */
+    padding: 0 32px;
+
+    /* Fundo branco */
+    background-color: #ffffff;
+
+    /* Linha discreta abaixo do cabeçalho */
+    border-bottom: 1px solid #eeeeee;
 }
 
-/* Ajusta o tamanho da imagem do cabeçalho */
-.cabecalho img {
-    width: 80px;
+
+/* Nome/logo do Santa Dieta */
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--verde-principal);
 }
 
-/* Define a cor de fundo da barra de navegação */
-nav {
-    background-color: #2e6a0d;
+
+/* Botão das três barras do menu */
+.btn-menu {
+    border: none;
+    background: none;
+    font-size: 26px;
+    color: var(--verde-principal);
+    cursor: pointer;
+    padding: 8px;
 }
 
-/* Alinha os itens do menu na horizontal */
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
 
-/* Estiliza os links do menu */
-nav a {
-    display: block;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-}
+/* =========================================================
+   PÁGINA DO ALIMENTO
+   Configurações principais da ficha nutricional.
+   ========================================================= */
 
-/* Muda a cor quando o mouse passa por cima */
-nav a:hover {
-    background-color: #444;
-}
 
-/* Cria espaço interno no conteúdo principal */
+/* Área principal da página do alimento */
 main {
-    padding: 30px;
+    /* Limita a largura para não deixar a ficha muito esticada */
+    max-width: 700px;
+
+    /* Centraliza horizontalmente */
+    margin: 40px auto;
+
+    /* Espaçamento interno nas laterais */
+    padding: 0 20px;
 }
 
 
-.ficha {
-    width: 360px;
-    margin: 30px auto;
-    padding: 15px;
-
-    border: 3px solid #222;
+/* Card que contém todas as informações do alimento */
+.alimento {
+    /* Fundo branco */
     background-color: white;
 
-    font-family: Arial, sans-serif;
-    color: #222;
+    /* Arredonda os cantos */
+    border-radius: 18px;
+
+    /* Espaçamento interno */
+    padding: 30px;
+
+    /* Sombra muito suave */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
 }
 
-.ficha h2 {
-    margin: 0 0 10px;
 
+/* =========================================================
+   IMAGEM DO ALIMENTO
+   ========================================================= */
+
+.imagem-alimento {
+    /* Centraliza a imagem */
     text-align: center;
-    font-size: 28px;
+
+    /* Espaço abaixo da imagem */
+    margin-bottom: 20px;
 }
 
-.titulo-ficha {
-    padding: 8px 0;
 
-    border-top: 8px solid #222;
-    border-bottom: 4px solid #222;
+.imagem-alimento img {
+    /* Tamanho da imagem */
+    width: 180px;
+    height: 180px;
 
-    font-size: 20px;
-    font-weight: bold;
+    /* Mantém a proporção da imagem */
+    object-fit: contain;
+
+    /* Deixa a imagem circular */
+    border-radius: 50%;
 }
 
+
+/* =========================================================
+   INFORMAÇÕES DO ALIMENTO
+   Nome e descrição.
+   ========================================================= */
+
+.informacoes {
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Espaço abaixo das informações */
+    margin-bottom: 30px;
+}
+
+
+/* Nome do alimento */
+.informacoes h1 {
+    font-size: 30px;
+
+    /* Espaço entre o nome e a descrição */
+    margin-bottom: 10px;
+}
+
+
+/* Descrição do alimento */
+.informacoes p {
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FICHA NUTRICIONAL
+   ========================================================= */
+
+.ficha {
+    /* Linha que separa a descrição da ficha */
+    border-top: 1px solid #eee;
+
+    /* Espaço entre a linha e o título */
+    padding-top: 25px;
+}
+
+
+/* Título "Informação nutricional" */
+.ficha h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+/* Texto "Porção de 100 g" */
 .porcao {
-    padding: 10px 0;
+    color: #888;
 
     font-size: 14px;
-    font-weight: bold;
 
-    border-bottom: 1px solid #222;
+    margin-bottom: 20px;
 }
 
-.linha {
+
+/* =========================================================
+   NUTRIENTES
+   Área que contém calorias, proteínas, fibras etc.
+   ========================================================= */
+
+
+/* Caixa que agrupa todos os nutrientes */
+.nutrientes {
+    border: 1px solid #eee;
+
+    /* Arredonda os cantos */
+    border-radius: 12px;
+
+    /* Faz os elementos internos respeitarem
+       o arredondamento da caixa */
+    overflow: hidden;
+}
+
+
+/* Cada linha da informação nutricional */
+.nutriente {
+    /* Coloca nome e valor lado a lado */
     display: flex;
+
+    /* Nome fica à esquerda e valor à direita */
     justify-content: space-between;
+
+    /* Alinha verticalmente */
     align-items: center;
 
-    padding: 9px 0;
+    /* Espaçamento interno */
+    padding: 15px 18px;
 
-    border-bottom: 1px solid #222;
+    /* Linha entre os nutrientes */
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* Remove a linha do último nutriente */
+.nutriente:last-child {
+    border-bottom: none;
+}
+
+
+/* Nome do nutriente */
+.nutriente span {
+    color: #555;
+}
+
+
+/* Valor do nutriente */
+.nutriente strong {
+    font-weight: bold;
+    color: var(--verde-principal);
+}
+
+
+/* =========================================================
+   PÁGINA INICIAL
+   ========================================================= */
+
+.inicio {
+    /* Limita a largura da página */
+    max-width: 900px;
+
+    /* Centraliza o conteúdo */
+    margin: 0 auto;
+
+    /* Espaçamento interno */
+    padding: 70px 20px;
+}
+
+
+/* =========================================================
+   ÁREA DE BOAS-VINDAS
+   ========================================================= */
+
+.boas-vindas {
+    /* Centraliza o conteúdo */
+    text-align: center;
+
+    /* Espaço abaixo da apresentação */
+    margin-bottom: 50px;
+}
+
+
+/* Título da página inicial */
+.boas-vindas h1 {
+    font-size: 34px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Texto abaixo do título */
+.boas-vindas p {
+    color: #777;
 
     font-size: 16px;
 }
 
-.linha strong {
-    font-weight: bold;
+
+/* =========================================================
+   WIDGETS / CARDS
+   ========================================================= */
+
+
+/* Container dos widgets */
+.widgets {
+    /* Ativa o sistema de Grid do CSS */
+    display: grid;
+
+    /* Cria duas colunas */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Espaço entre os widgets */
+    gap: 20px;
 }
 
-.destaque {
-    border-bottom: 3px solid #222;
 
+/* Cada widget */
+.widget {
+    /* Coloca o ícone e o texto lado a lado */
+    display: flex;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+    /* Espaço entre ícone e texto */
+    gap: 20px;
+
+    /* Espaçamento interno */
+    padding: 25px;
+
+    /* Fundo branco */
+    background-color: white;
+
+    /* Cantos arredondados */
+    border-radius: 16px;
+
+    /* Borda discreta */
+    border: 1px solid #eeeeee;
+
+    /* Remove o sublinhado dos links */
+    text-decoration: none;
+
+    /* Cor padrão do texto */
+    color: #333;
+
+    /* Animação suave */
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Efeito quando o mouse passa sobre o widget */
+.widget:hover {
+    /* Levanta ligeiramente o card */
+    transform: translateY(-3px);
+
+    /* Adiciona uma sombra suave */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Ícone do widget */
+.icone {
+    font-size: 35px;
+}
+
+
+/* Título do widget */
+.widget h2 {
     font-size: 18px;
-    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+/* Descrição do widget */
+.widget p {
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+   Regras aplicadas quando a tela tem até 600px.
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+
+    /* -------------------------
+       CABEÇALHO NO CELULAR
+       ------------------------- */
+
+    .cabecalho {
+        /* Reduz o espaço lateral */
+        padding: 0 20px;
+    }
+
+
+    /* -------------------------
+       PÁGINA DO ALIMENTO
+       ------------------------- */
+
+    main {
+        /* Reduz a margem superior */
+        margin: 20px auto;
+    }
+
+
+    .alimento {
+        /* Reduz o espaço interno */
+        padding: 22px;
+    }
+
+
+    /* Reduz a imagem no celular */
+    .imagem-alimento img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    /* Reduz o tamanho do nome do alimento */
+    .informacoes h1 {
+        font-size: 26px;
+    }
+
+
+    /* -------------------------
+       PÁGINA INICIAL
+       ------------------------- */
+
+    .inicio {
+        padding: 40px 20px;
+    }
+
+
+    .boas-vindas h1 {
+        font-size: 27px;
+    }
+
+
+    /* No celular os widgets ficam
+       um embaixo do outro */
+    .widgets {
+        grid-template-columns: 1fr;
+    }
+
 }

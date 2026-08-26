@@ -1,52 +1,56 @@
 # Projeto Santa Dieta
 
-Este projeto é uma página web simples feita com HTML e CSS.
+O **Santa Dieta** é um projeto web desenvolvido para apresentar informações nutricionais de alimentos de forma simples, organizada e acessível.
 
-## O que foi criado
+O projeto está sendo desenvolvido inicialmente com **HTML, CSS e JavaScript**, com previsão de evolução para um sistema com backend, banco de dados e área administrativa.
 
-- Um cabeçalho com logo e nome do projeto.
-- Um menu de navegação com categorias de alimentos.
-- Uma área principal com mensagem de boas-vindas.
-- Estilos básicos para organizar a página e deixar a navegação com cor.
+---
 
-## Arquivos do projeto
+## 🎯 Objetivo do projeto
 
-- main.html: estrutura da página.
-- style.css: estilos visuais da página.
-- images/: pasta com a imagem usada no cabeçalho.
+Criar uma plataforma onde o usuário possa consultar informações nutricionais de alimentos.
 
-## Como abrir
+A ideia principal é permitir que um alimento seja identificado através de um **QR Code ou código de barras**, direcionando o usuário diretamente para sua ficha nutricional.
 
-1. Abra o arquivo main.html no navegador.
-2. A página vai carregar o conteúdo e o estilo definidos no CSS.
+O projeto também contará futuramente com uma **área administrativa**, permitindo o gerenciamento dos alimentos cadastrados.
 
-## Observação
+---
 
-O projeto está em uma versão inicial, então o conteúdo pode ser ampliado com mais seções, textos e imagens depois.
+## 🛠️ Tecnologias
 
+### Atualmente utilizadas
 
-## Fluxo
-                 ┌──────────────┐
-                 │  MongoDB     │
-                 │              │
-                 │ Banana       │
-                 │ Maçã         │
-                 │ Laranja      │
-                 └──────┬───────┘
-                        ↑
-                        │
-                     consulta
-                        │
-                 ┌──────┴───────┐
-                 │   Express    │
-                 │   Node.js    │
-                 └──────┬───────┘
-                        ↑
-                     fetch()
-                        │
-                 ┌──────┴───────┐
-                 │ JavaScript   │
-                 │   frontend   │
-                 └──────┬───────┘
-                        ↓
-                     USUÁRIO
+- HTML5
+- CSS3
+- JavaScript
+
+### Futuramente
+
+- Node.js
+- Express
+- MongoDB
+- API REST
+- Sistema de autenticação
+- QR Code / Código de barras
+
+---
+
+## 📂 Estrutura do projeto
+
+```text
+Santa-Dieta/
+│
+├── index.html              ← Página inicial pública
+├── alimento.html           ← Ficha nutricional
+├── login.html              ← Página de login
+├── style.css               ← Estilos do projeto
+├── script.js               ← JavaScript da aplicação
+│
+├── admin/
+│   ├── index.html          ← Painel administrativo
+│   └── admin.js            ← JavaScript da área administrativa
+│
+└── imagens/
+    ├── banana.webp
+    ├── maca.webp
+    └── ...

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Santa Dieta</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <span>Santa Dieta</span>
+        </div>
+
+        <button id="btn-menu" class="btn-menu">
+            ☰
+        </button>
+
+    </header>
+
+
+    <nav id="menu" class="menu">
+
+        <button id="btn-fechar" class="btn-fechar">
+            ×
+        </button>
+
+        <ul>
+            <li>
+                <a href="#">Início</a>
+            </li>
+
+            <li>
+                <a href="#">Consultar alimento</a>
+            </li>
+
+            <li>
+                <a href="#">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#">Área restrita 🔒</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+        <section class="alimento">
+
+            <div class="imagem-alimento">
+                <img id="imagem-produto" src="" alt="Imagem do alimento">
+            </div>
+
+            <div class="informacoes">
+
+                <h1 id="nome-produto">
+                    Alimento
+                </h1>
+
+                <p id="descricao-produto">
+                    Informações nutricionais do alimento.
+                </p>
+
+            </div>
+
+
+            <div class="ficha">
+
+                <h2>Informação nutricional</h2>
+
+                <p class="porcao">
+                    Porção de 100 g
+                </p>
+
+                <div class="nutrientes">
+
+                    <div class="nutriente">
+                        <span>Calorias</span>
+                        <strong id="calorias">0 kcal</strong>
+                    </div>
+
+                    <div class="nutriente">
+                        <span>Carboidratos</span>
+                        <strong id="carboidratos">0 g</strong>
+                    </div>
+
+                    <div class="nutriente">
+                        <span>Proteínas</span>
+                        <strong id="proteinas">0 g</strong>
+                    </div>
+
+                    <div class="nutriente">
+                        <span>Gorduras</span>
+                        <strong id="gorduras">0 g</strong>
+                    </div>
+
+                    <div class="nutriente">
+                        <span>Fibras</span>
+                        <strong id="fibras">0 g</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

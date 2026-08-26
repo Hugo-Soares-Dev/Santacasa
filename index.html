@@ -1,52 +1,96 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <!-- Configurações básicas da página -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Santa Dieta</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+    <div class="logo">
+        <span>Santa Dieta</span>
+    </div>
+</header>
 
-    <!-- Link para o arquivo de estilos -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<main class="inicio">
 
-  <body>
-    <!-- Cabeçalho com logo e nome do projeto -->
-    <header>
-      <div class="cabecalho">
-        <img src="images/santa_icon.jpeg" alt="Logo da empresa" />
+    <section class="boas-vindas">
 
-        <h1>Santa Dieta</h1>
-      </div>
+        <h1>Bem-vindo ao Santa Dieta</h1>
 
-      <!-- Menu com as categorias principais -->
-      <nav>
-        <ul>
-          <li><a href="#">Frutas</a></li>
-          <li><a href="#">Legumes e verduras</a></li>
-          <li><a href="#">Grãos e cereais</a></li>
-          <li><a href="#">Oleaginosas e sementes</a></li>
-          <li><a href="#">Leguminosas</a></li>
-          <li><a href="#">Raízes e tubérculos</a></li>
-          <li><a href="#">Adicionar</a></li>
-        </ul>
-      </nav>
-    </header>
+        <p>
+            Consulte informações nutricionais de forma simples e rápida.
+        </p>
 
-    <!-- Conteúdo principal da página -->
-    <main>
-     <h2>Bem-vindo!</h2>
-      <input type="text" id="pesquisa" placeholder="Pesquisar produto..." > 
-      <button id="btnPesquisar">Pesquisar</button>
-      
-     <div id="produto"></div>
-    </main>
+    </section>
 
 
-    
-    
-    
+    <section class="widgets">
+
+        <a href="alimento.html" class="widget">
+
+            <span class="icone">🔎</span>
+
+            <div>
+                <h2>Consultar alimento</h2>
+
+                <p>
+                    Encontre informações nutricionais.
+                </p>
+            </div>
+
+        </a>
+
+
+        <a href="alimento.html" class="widget">
+
+            <span class="icone">🥦</span>
+
+            <div>
+                <h2>Alimentos</h2>
+
+                <p>
+                    Veja os alimentos disponíveis.
+                </p>
+            </div>
+
+        </a>
+
+
+        <a href="#" class="widget">
+
+            <span class="icone">📖</span>
+
+            <div>
+                <h2>Nutrição</h2>
+
+                <p>
+                    Aprenda sobre informações nutricionais.
+                </p>
+            </div>
+
+        </a>
+
+
+        <a href="login.html" class="widget">
+
+            <span class="icone">🔐</span>
+
+            <div>
+                <h2>Área restrita</h2>
+
+                <p>
+                    Acesso exclusivo para administradores.
+                </p>
+            </div>
+
+        </a>
+
+    </section>
+
+</main>
+
     <script src="script.js"></script>
-
-  </body>
+</body>
 </html>
